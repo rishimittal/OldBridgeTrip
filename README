@@ -1,0 +1,38 @@
+Problem  GHAC Old Bridge Trip
+
+In Hyderabad, GHAC organizes Trek and other adventurous stuff for people. However,
+recently there aremany geek people who have tried on these adventure trips. As a result there had been two
+major classificationof people, geeks and non-geeks. In a particular trek, where they have to cross an old bridge
+which can allow maximum 4 people, with the condition that bridge can only hold weight at
+one point i.e all 4 of them have to be together on bridge and it can only be used one at a time;
+a next pass on bridge should only happen when
+previous pass is complete. All other combination are safe. Furthermore, this bridge is located
+near to the
+village of singers. So Trip Leader decided to invite some singers on the trip to bridge.
+
+In order to maintain the spirit of adventure, you cannot put three geeks with one non-geek or
+vice-versa.
+But if boarding group has a singer, then he can calm down even unbalanced group. But you
+can never allow
+two singers on same pass, as they have jealousy issues. Two procedures are needed,
+GeekArrives() and NonGeekArrives(), called by a geek or non-geek when he/she arrives at the
+end of bridge. The proceduresarrange the arriving geeks and nongeeks into safe bridgeloads. To get on the bridge, a thread
+calls
+
+BoardBridge(); once the bridge is at its full capacity, one thread calls GoBridge(). GoBridge()
+does not return
+until the members have left the end. Assume BoardBridge() and GoBridge() are already
+written. Implement GeekArrives() and NonGeekArrives(). These methods should not return
+until after GoBridge() has been called
+for the bridgeload. Any order is acceptable (again, don't worry about starvation), and there
+should be no
+busy-waiting and no undue waiting (geeks and nongeeks should not wait if there are enough
+of them for a safe bridgeload).
+
+Input:
+./a.out <#of geeks> <#of non-geeks> <#of singers>
+./a.out 12 15 3
+
+Output:
+Lines giving details about transactions of the 4 people that are on a bridge.
+
